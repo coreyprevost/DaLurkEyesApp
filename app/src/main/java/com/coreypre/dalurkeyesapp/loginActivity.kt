@@ -10,11 +10,13 @@ class loginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout_loginactivity)
+        btn_Login.setOnClickListener {
+            Log.d("loginActivity", "Login attempted")
+        }
 
         btn_Back.setOnClickListener {
             Log.d("loginActivity", "Back Button Pressed")
-            val intent2 = Intent(this, MainActivity::class.java)
-            startActivity(intent2)
+          finish()
         }
     }
 }

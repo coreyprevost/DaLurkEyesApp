@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "625288392144",
+    "firebase_url": "https://dalurkeyesapp.firebaseio.com",
+    "project_id": "dalurkeyesapp",
+    "storage_bucket": "dalurkeyesapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:625288392144:android:15f1608e56dc8d1d455dd5",
+        "android_client_info": {
+          "package_name": "com.coreypre.dalurkeyesapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "625288392144-q1motanrrpm735re4kv16km84o53num2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6V_irEH2aZaNZ5QQrhlOf5vYTyQP-bGQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "625288392144-q1motanrrpm735re4kv16km84o53num2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_orange_dark">
+    android:background="@android:color/holo_orange_dark"
+    android:paddingStart="16dp">
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
@@ -46,7 +47,7 @@
         android:layout_height="50dp"
         android:background="@color/clr_btn"
         android:text="Login"
-        android:textSize="24sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
         app:layout_constraintHorizontal_bias="0.0"
@@ -59,11 +60,11 @@
         android:layout_width="172dp"
         android:layout_height="53dp"
         android:text="@string/txt_tv_Back"
+        android:textColor="@android:color/white"
         android:textSize="18sp"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_Login"
         app:layout_constraintVertical_bias="1.0" />
