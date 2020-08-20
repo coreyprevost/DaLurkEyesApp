@@ -59,6 +59,7 @@
         android:id="@+id/btn_Register"
         android:layout_width="0dp"
         android:layout_height="40dp"
+        android:background="@color/clr_btn"
         android:text="Register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/et_Password"

@@ -1,5 +1,6 @@
 package com.coreypre.dalurkeyesapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -21,6 +22,8 @@ class MainActivity : AppCompatActivity() {
         }
         tv_AlreadyHaveAnAccount.setOnClickListener {
             Log.d("Main Activity", "Try to open login Activity")
+            val intent = Intent(this, loginActivity::class.java)
+            startActivity(intent)
         }
     }
 }
