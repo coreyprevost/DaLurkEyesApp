@@ -16,6 +16,10 @@ class MainActivity : AppCompatActivity() {
         btn_Register.setOnClickListener {
             val email = et_Email.text.toString()
             val password = et_Password.text.toString()
+            if (email.isEmpty() || password.isEmpty()){
+                Toast.makeText(this, "Mannnn this shit empty! Write something!", Toast.LENGTH_LONG).show()
+                return@setOnClickListener
+            }
             Log.d("Main Activity","The email is " + email)
             Log.d("Main Activity","The password is " + password)
             Toast.makeText(this, "Email and Password Registered", Toast.LENGTH_LONG).show()
@@ -25,6 +29,9 @@ class MainActivity : AppCompatActivity() {
 
                     Log.d("Main", "Successfully created user with uid: ${it.result?.user?.uid}")
 
+                }
+                .addOnFailureListener {
+                    Log.d("Main", "This shit aint work pimp, here's why:, ${it.message}")
                 }
 
         }
