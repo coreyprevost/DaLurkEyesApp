@@ -14,25 +14,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         btn_Register.setOnClickListener {
-            val email = et_Email.text.toString()
-            val password = et_Password.text.toString()
-            if (email.isEmpty() || password.isEmpty()){
-                Toast.makeText(this, "Mannnn this shit empty! Write something!", Toast.LENGTH_LONG).show()
-                return@setOnClickListener
-            }
-            Log.d("Main Activity","The email is " + email)
-            Log.d("Main Activity","The password is " + password)
-            Toast.makeText(this, "Email and Password Registered", Toast.LENGTH_LONG).show()
-            FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener {
-                    if (!it.isSuccessful) return@addOnCompleteListener
+            performRegister()
 
-                    Log.d("Main", "Successfully created user with uid: ${it.result?.user?.uid}")
-
-                }
-                .addOnFailureListener {
-                    Log.d("Main", "This shit aint work pimp, here's why:, ${it.message}")
-                }
 
         }
         tv_AlreadyHaveAnAccount.setOnClickListener {
@@ -40,5 +23,29 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, loginActivity::class.java)
             startActivity(intent)
         }
+
+    }
+    private fun performRegister(){
+        val email = et_Email.text.toString()
+        val password = et_Password.text.toString()
+        if (email.isEmpty() || password.isEmpty()){
+            Toast.makeText(this, "Mannnn this shit empty! Write something!", Toast.LENGTH_LONG).show()
+            return
+        }
+        Log.d("Main Activity","The email is " + email)
+        Log.d("Main Activity","The password is " + password)
+        FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener {
+                if (!it.isSuccessful) return@addOnCompleteListener  Toast.makeText(this, "Mannnn stop playing, that ain't how you supposed to ", Toast.LENGTH_LONG).show()
+
+
+                Log.d("Main", "Successfully created user with uid: ${it.result?.user?.uid}")
+                Toast.makeText(this, "Email and Password Registered", Toast.LENGTH_LONG).show()
+
+            }
+            .addOnFailureListener {
+                Log.d("Main", "This shit aint work pimp, here's why:, ${it.message}")
+
+            }
     }
 }
